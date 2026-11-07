@@ -131,7 +131,7 @@ a{color:inherit}
 .timeline p{margin:0;font-size:.93rem}
 
 /* ---------- CONTACT ---------- */
-.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.contact-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
 .contact-card{background:var(--white);border-radius:16px;padding:24px 20px;text-decoration:none;color:var(--text);border:1px solid var(--line);display:flex;flex-direction:column;align-items:flex-start;gap:6px;transition:transform .2s,border-color .2s;min-height:44px}
 .contact-card:hover{transform:translateY(-3px);border-color:var(--taupe-dark)}
 .contact-card:focus-visible{outline:3px solid var(--taupe-dark);outline-offset:2px}
@@ -149,7 +149,7 @@ a{color:inherit}
   .hero-photo{width:240px;height:264px;margin:0}
   .about-grid,.two-col{grid-template-columns:1fr}
   .skills-grid,.projects-grid{grid-template-columns:repeat(2,1fr)}
-  .contact-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:repeat(3,1fr)}
 }
 @media (max-width:760px){
   .menu-toggle{display:grid;place-items:center}
@@ -157,7 +157,8 @@ a{color:inherit}
   .menu.open{display:flex}
   .menu a{display:block;padding:12px 0}
   .section{padding:64px 0}
-  .skills-grid,.projects-grid,.about-cards,.contact-grid{grid-template-columns:1fr}
+  .skills-grid,.projects-grid,.about-cards{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr 1fr}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -167,6 +168,7 @@ a{color:inherit}
 <!-- Íconos reutilizables -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
   <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.3-1.69-1.3-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
   <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></symbol>
@@ -176,6 +178,7 @@ a{color:inherit}
   <symbol id="i-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H7a5 5 0 1 1 .9-9.92A6 6 0 0 1 19 10.5a4.25 4.25 0 0 1-1.5 8.5Z"/><path d="m10 14 2-2 2 2"/><path d="M12 12v5"/></symbol>
   <symbol id="i-mobile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
   <symbol id="i-db" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15v3M11 11v7M15 7v11M19 12v6"/></symbol>
   <symbol id="i-cube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></symbol>
   <symbol id="i-grad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></symbol>
   <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
@@ -211,7 +214,7 @@ a{color:inherit}
   </svg>
   <div class="container">
     <div class="hero-photo">
-      <img src="assets/img/foto.png" alt="Foto de María José Cordón Vasco">
+      <img src="assets/img/foto.jpg" alt="Foto de María José Cordón Vasco">
     </div>
     <div class="hero-text">
       <p class="hello">¡Hola!, soy</p>
@@ -221,6 +224,9 @@ a{color:inherit}
       <div class="buttons">
         <a class="btn primary" href="https://github.com/Majitoooo" target="_blank" rel="noopener">
           <svg aria-hidden="true"><use href="#i-github"/></svg>GitHub
+        </a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/maria-jos%C3%A9-cordon-04aa74418" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn
         </a>
         <a class="btn ghost" href="assets/cv/Hoja_de_vida_Maria_Jose_Cordon_Vasco.pdf" download="Hoja de vida María José Cordón Vasco.pdf">
           <svg aria-hidden="true"><use href="#i-download"/></svg>Descargar hoja de vida
@@ -306,8 +312,8 @@ a{color:inherit}
       </article>
       <article class="skill-area">
         <div class="skill-head"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-db"/></svg></span><h3>Bases de datos y datos</h3></div>
-        <p>Modelado, consultas y análisis y visualización de información.</p>
-        <ul class="tags"><li>SQL</li><li>PostgreSQL</li><li>PostGIS</li><li>SQL Server</li><li>Power BI</li><li>Excel</li></ul>
+        <p>Modelado, procesos ETL, bodegas de datos y visualización de información.</p>
+        <ul class="tags"><li>SQL</li><li>ETL</li><li>Modelo estrella</li><li>PostgreSQL</li><li>PostGIS</li><li>SQL Server</li><li>Power BI</li><li>Excel</li></ul>
       </article>
       <article class="skill-area">
         <div class="skill-head"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-cube"/></svg></span><h3>Programación</h3></div>
@@ -328,6 +334,7 @@ a{color:inherit}
       <button class="filter" data-filter="todos" aria-pressed="true">Todos</button>
       <button class="filter" data-filter="web" aria-pressed="false">Web</button>
       <button class="filter" data-filter="ia" aria-pressed="false">Inteligencia artificial</button>
+      <button class="filter" data-filter="datos" aria-pressed="false">Datos y BI</button>
       <button class="filter" data-filter="devops" aria-pressed="false">DevOps</button>
       <button class="filter" data-filter="movil" aria-pressed="false">Móvil</button>
       <button class="filter" data-filter="java" aria-pressed="false">Java</button>
@@ -362,6 +369,16 @@ a{color:inherit}
           <p class="desc">Red neuronal entrenada en Keras con el conjunto de imágenes CIFAR-10. El modelo se expone con una API REST hecha en FastAPI y una página web permite cargar una imagen y ver la predicción.</p>
           <ul class="tags"><li>Python</li><li>Keras</li><li>Deep learning</li><li>FastAPI</li><li>Jupyter</li></ul>
           <a class="repo-link" href="https://github.com/Majitoooo/cifar10_web_demo" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg>Ver repositorio</a>
+        </div>
+      </article>
+
+      <article class="project" data-cat="datos">
+        <div class="project-top"><span class="project-cat"><svg aria-hidden="true"><use href="#i-chart"/></svg>Datos y BI</span><h3>ETL y análisis de ventas – Olist</h3></div>
+        <div class="project-body">
+          <p class="project-meta"><span><b>Contexto:</b> Inteligencia de Negocios</span><span>2026</span></p>
+          <p class="desc">Proceso ETL completo en SQL Server con los datos de comercio electrónico de Olist (cerca de 100.000 pedidos): capa de staging, bodega de datos en modelo estrella con una tabla de hechos de ventas y ocho dimensiones, historial de clientes y un procedimiento que orquesta toda la carga. Con los datos construí en Power BI tres historias para apoyar decisiones de negocio.</p>
+          <ul class="tags"><li>SQL Server</li><li>ETL</li><li>Modelo estrella</li><li>Power BI</li><li>Storytelling con datos</li></ul>
+          <p class="project-meta" style="margin:0"><span>Proyecto de clase · sin repositorio público</span></p>
         </div>
       </article>
 
@@ -512,6 +529,9 @@ a{color:inherit}
       </a>
       <a class="contact-card" href="tel:+573218067307">
         <svg aria-hidden="true"><use href="#i-phone"/></svg><h3>Teléfono</h3><p>+57 321 806 7307</p>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/maria-jos%C3%A9-cordon-04aa74418" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#i-linkedin"/></svg><h3>LinkedIn</h3><p>María José Cordón</p>
       </a>
       <a class="contact-card" href="https://github.com/Majitoooo" target="_blank" rel="noopener">
         <svg aria-hidden="true"><use href="#i-github"/></svg><h3>GitHub</h3><p>github.com/Majitoooo</p>
